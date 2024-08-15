@@ -1,6 +1,6 @@
 # timer.d5l.de
 
-Hier entsteht ein einfacher, konfigurierbarer Timer zum Einsatz im Unterricht, Leergängen oder zu beliebigen anderen Gelegenheiten.
+Hier entsteht ein einfacher, konfigurierbarer Timer zum Einsatz im Unterricht, auf Lehrgängen oder zu beliebigen anderen Gelegenheiten.
 
 ## Author
 
