@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    You should now be redirected to <a href="https://timer.d5l.de">timer.d5l.de</a> using the custom options from your URI.
+    <script>
+        let lctn = window.location.href;
+        lctn = lctn.replace('/', '#');
+        if (window.location.href ==! lctn)
+            window.location = lctn;
+        else
+            window.location = 'https://timer.d5l.de/';
+    </script>
+</body>
+</html>

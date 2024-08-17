@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D5L Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="green">
+    <div id="container">
+        <div id="timeDisplay">00:00</div>
+    </div>
+
+    <dialog id="settings">
+        <h1>Einstellungen</h1>
+        <form method="dialog">
+            <div id="settings-inner">
+                <fieldset name="presets" class="flex-col">
+                    <legend>Voreinstellungen (Tasten 1, 2, ..., 9)</legend>
+                    <div class="flex-row">
+                        <input type="text" id="preset1Input" class="time" size="4">
+                        <input type="text" id="preset2Input" class="time" size="4">
+                        <input type="text" id="preset3Input" class="time" size="4">
+                    </div>
+                    <div class="flex-row">
+                        <input type="text" id="preset4Input" class="time" size="4">
+                        <input type="text" id="preset5Input" class="time" size="4">
+                        <input type="text" id="preset6Input" class="time" size="4">
+                    </div>
+                    <div class="flex-row">
+                        <input type="text" id="preset7Input" class="time" size="4">
+                        <input type="text" id="preset8Input" class="time" size="4">
+                        <input type="text" id="preset9Input" class="time" size="4">
+                        <!--<input type="text" id="preset0Input" class="time" size="4">-->
+                    </div>
+                </fieldset>
+                <fieldset name="timer" class="flex-col">
+                    <legend>Timer</legend>
+                    <div class="flex-row">
+                        <label for="stepSizeInput">Schrittweite für +/-</label>
+                        <input type="text" id="stepSizeInput" class="time">
+                    </div>
+                </fieldset>
+                <fieldset name="keybindings" class="flex-col">
+                    <legend>Keybindings</legend>
+                    <div class="flex-row">
+                        <label for="timeredit">Neuer Timer</label>
+                        <button id="timeredit" class="key"></button>
+                    </div>
+                    <div class="flex-row">
+                        <label for="timerstart">Start/Stop</label>
+                        <button id="timerstart" class="key"></button>
+                    </div>
+                    <!--<div class="flex-row">
+                        <label for="recall">Beenden</label>
+                        <button id="recall" class="key"></button>
+                    </div>-->
+                    <!--
+                    <label for="phasenext">Nächste Phase</label>
+                    <button id="phasenext" class="key"></button>
+                    <button id="phasenextalt" class="key"></button>
+                    <label for="phaseprev">Vorherige Phase</label>
+                    <button id="phaseprev" class="key"></button>
+                    <br>-->
+                    <div class="flex-row">
+                        <label for="timerreset">Zurücksetzen</label>
+                        <button id="timerreset" class="key"></button>
+                    </div>
+                    <div class="flex-row">
+                        <label for="timerplus">Zeit erhöhen</label>
+                        <button id="timerplus" class="key"></button>
+                        <button id="timerplusalt" class="key"></button>
+                        <button id="timerplusalt2" class="key"></button>
+                    </div>
+                    <div class="flex-row">
+                        <label for="timerminus">Zeit verringern</label>
+                        <button id="timerminus" class="key"></button>
+                        <button id="timerminusalt" class="key"></button>
+                        <button id="timerminusalt2" class="key"></button>
+                    </div>
+                    <!--<div class="flex-row">
+                        <label for="togglemute">Toggle Ton</label>
+                        <button id="togglemute" class="key"></button>
+                    </div>-->
+                    <div class="flex-row">
+                        <label for="togglefullscreen">Toggle Vollbild</label>
+                        <button id="togglefullscreen" class="key"></button>
+                    </div>
+                    <div class="flex-row">
+                        <label for="togglesettings">Einstellungen</label>
+                        <button id="togglesettings" class="key"></button>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="flex-row">
+                <button type="submit" value="abort" class="abort">
+                    Abbrechen
+                </button>
+                <button type="submit" value="save">Speichern</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="timerEditDialog">
+        <form method="dialog" class="flex-col">
+            <label for="timerEditInput">Neuer Timer</label>
+            <input type="text" id="timerEditInput" autofocus class="my-2"/>
+            <button value="confirm">Setze Timer</button>
+        </form>
+    </dialog>
+    <dialog id="messageDialog">
+        <form method="dialog" class="flex-col">
+            <h1></h1>
+            <p></p>
+            <button type="submit" value="confirm">OK</button>
+        </form>
+    </dialog>
+    <script src="helper.js"></script>
+    <script src="settings.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

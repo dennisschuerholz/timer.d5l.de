@@ -1,0 +1,74 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #eeeeee;
+    color: #111111;
+    font-family: "Playwrite DE Grund", sans-serif;
+}
+body.dark {
+    background-color: #111111;
+    color: #eeeeee;
+}
+body.green {
+    background-color: #274C43;
+    color: #FBF7F5;
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#timeDisplay {
+    flex: 0 0 auto;
+    font-size: 20vw;
+    font-family: "LXGW WenKai Mono TC", monospace;
+}
+
+.green dialog {
+    background-color: #93A5A1;
+}
+dialog h1 {
+    margin: 0 0 .2em;
+}
+.flex-col {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.flex-row > * {
+    flex: 1 0 auto;
+    margin: .4ex;
+}
+fieldset[name='keybindings'] > .flex-row > button {
+    flex: 0 0 auto;
+}
+fieldset:last-of-type {
+    margin-bottom: .2em;
+}
+button, input, select, textarea {
+    font-family: "Playwrite DE Grund", sans-serif;
+    padding: 0 .6em;
+    font-size: 0.85em;
+    background-color: #FBF7F5;
+    border-radius: 2em;
+    min-width: 3em;
+    min-height: 2em;
+    line-height: 2em;
+}
+input.time, input[type='number'] {
+    font-family: "LXGW WenKai Mono TC", monospace;
+    text-align: right;
+}
+.my-2 {
+    margin: .5rem 0;
+}
+.key.active {
+    background-color: #274C43;
+    color: #FBF7F5;
+}
