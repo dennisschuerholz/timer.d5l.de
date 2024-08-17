@@ -26,15 +26,15 @@ function parseKeydown(e) {
         case "recall":
             recall();
             break;
-        case "nextphase":
+        /*case "nextphase":
             break;
         case "previousphase":
-            break;
+            break;*/
         case "presets":
             preset(e.key);
-        case "mute":
+        /*case "mute":
             toggleMute();
-            break;
+            break;*/
         case "fullscreen":
             if (
                 document.fullscreenElement /* Standard syntax */ ||

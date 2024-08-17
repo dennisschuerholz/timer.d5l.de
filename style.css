@@ -64,6 +64,7 @@ button, input, select, textarea {
 input.time, input[type='number'] {
     font-family: "LXGW WenKai Mono TC", monospace;
     text-align: right;
+    width: 100px;
 }
 .my-2 {
     margin: .5rem 0;
