@@ -40,6 +40,8 @@ Ziel ist die Entwicklung eines einfachen, konfigurierbaren Timers zum Einsatz im
   - Sanduhr
   - ...
 - [ ] Konfiguration via URL-Parameter (Links auf spezifische Timer)
+- [ ] Status des Timer (Endzeit, etc.) persistieren
+- [ ] Möglichkeit zum Einstellen der Zielzeit statt Dauer
 
 ## Unterstützung
 
