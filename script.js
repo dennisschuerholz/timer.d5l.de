@@ -32,6 +32,7 @@ function parseKeydown(e) {
             break;*/
         case "presets":
             preset(e.key);
+            break;
         /*case "mute":
             toggleMute();
             break;*/
