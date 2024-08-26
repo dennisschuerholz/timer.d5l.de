@@ -30,6 +30,11 @@ Da dieser Timer rein im Browser ausgeführt wird und keinerlei Infrastruktur ben
   * *1:23:45* entspricht 1 Stunde, 23 Minuten und 45 Sekunden
   * Alle Dezimalzahlen sind auch mit Komma **,** statt Punkt **.** schreibbar.
 * Die Einstellungen sind über Neustarts hinweg persistent, da sie im LocalStorage des Browsers abgelegt werden.
+* Der aktuelle Status ist persistent:
+  * Zustand (gestartet, angehalten)
+  * Restzeit
+  * D.h. man kann einen Timer über bspw. 24h starten, den Browser zwischendurch schließen und der Countdown läuft anschließend normal weiter.
+
 ## Planung
 
 - [ ] Konfigurierbares Basisdesign (über verschiedene Farbschemata)
@@ -42,7 +47,6 @@ Da dieser Timer rein im Browser ausgeführt wird und keinerlei Infrastruktur ben
   - Sanduhr
   - ...
 - [ ] Konfiguration via URL-Parameter (Links auf spezifische Timer)
-- [ ] Status des Timer (Endzeit, etc.) persistieren
 - [ ] Möglichkeit zum Einstellen der Zielzeit statt Dauer
 
 ## Unterstützung

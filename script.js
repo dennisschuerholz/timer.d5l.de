@@ -1,5 +1,4 @@
 let countdown;
-let timeRemaining = 0;
 let timerValue = 0;
 let isTimerRunning = false;
 const timeDisplay = document.getElementById("timeDisplay");
@@ -126,6 +125,7 @@ function timer() {
 function setTimer(seconds) {
     timeRemaining = timerValue = seconds;
     displayTimeLeft(timeRemaining);
+    setSetting('state_timer_remaining', timeRemaining);
 }
 
 function startStopTimer() {
@@ -140,6 +140,9 @@ function startStopTimer() {
         document.body.classList.remove("timerRunning");
         //startStopButton.innerHTML = '<i class="fas fa-play"></i>';
     }
+    setSetting('state_timer_start', Date.now());
+    setSetting('state_timer_remaining', timeRemaining);
+    setSetting('state_timer_running', isTimerRunning);
     //startStopButton.blur();
 }
 //startStopButton.addEventListener("click", startStopTimer);
@@ -197,3 +200,9 @@ function decrementTimer() {
     //decrementTimeButton.blur();
 }
 //decrementTimeButton.addEventListener("click", decrementTimer);
+
+displayTimeLeft(timeRemaining);
+if (shouldTimerRun) {
+    startStopTimer();
+}
+

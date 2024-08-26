@@ -25,10 +25,13 @@ let presets = {
     9: 540,
     0: 600,
 }
+let timeRemaining = 0;
+let timerStart = null;
+let shouldTimerRun = false;
 
 function getSetting(key, def = null) {
     const setting = localStorage.getItem(key);
-    if (setting == null || setting == "undefined" || setting == "") {
+    if (setting == null || setting === "undefined" || setting === "") {
         return def;
     }
     return setting;
@@ -98,6 +101,13 @@ function loadSettings() {
     keybindings["togglesettings"] = document.getElementById("togglesettings").innerHTML =
         getSetting("settings_key_togglesettings", "Q");
     fillAlternativeKeys(keybindings);
+    shouldTimerRun = getBooleanSetting('state_timer_running');
+    timeRemaining = getNumericSetting('state_timer_remaining');
+    timerStart = getNumericSetting('state_timer_start');
+    if (shouldTimerRun) {
+        timeRemaining = timeRemaining - Math.floor((Date.now() - timerStart)/1000);
+        if (timeRemaining < 0) timeRemaining = 0;
+    }
 }
 loadSettings();
 
