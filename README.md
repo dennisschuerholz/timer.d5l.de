@@ -1,9 +1,11 @@
 # timer.d5l.de
 
-Dies ist das Repository des D5L Timers ([timer.d5l.de](https://timer.d5l.de))
+Dies ist das Repository des D5L Timers ([timer.d5l.de](https://timer.d5l.de)).
 
 Dieser Countdown ist als ablenkungsfreie Alternative zu vielen verfügbaren Angeboten für den Unterricht konzipiert.
 Ziel ist die Entwicklung eines einfachen, konfigurierbaren Timers zum Einsatz im Unterricht, auf Lehrgängen oder zu beliebigen anderen Gelegenheiten.
+
+Da dieser Timer rein im Browser ausgeführt wird und keinerlei Infrastruktur benötigt kann er auch als [Archiv heruntergeladen](https://github.com/dennisschuerholz/timer.d5l.de/archive/refs/heads/main.zip) und die `index.html`-Datei lokal im Browser geöffnet werden.
 
 ## Funktionen
 
