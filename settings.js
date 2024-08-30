@@ -8,7 +8,7 @@ let keybindings = {
     //nextphase: ["N", "Enter"],
     //previousphase: "P",
     mute: 'M',
-    fullscreen: "F",
+    fullscreen: ["F11", "F"],
     togglesettings: "Q",
     presets: ['0', '1', '2','3','4','5','6','7','8','9'],
 };
@@ -96,8 +96,8 @@ function loadSettings() {
     keybindings["timeminus"] = [bind1, bind2, bind3];
     /*keybindings["mute"] = document.getElementById("togglemute").innerHTML =
         getSetting("settings_key_togglemute", "M");*/
-    keybindings["fullscreen"] = document.getElementById("togglefullscreen").innerHTML =
-        getSetting("settings_key_togglefullscreen", "F");
+    keybindings["fullscreen"] = [document.getElementById("togglefullscreen").innerHTML =
+        getSetting("settings_key_togglefullscreen", "F"), "F11"];
     keybindings["togglesettings"] = document.getElementById("togglesettings").innerHTML =
         getSetting("settings_key_togglesettings", "Q");
     fillAlternativeKeys(keybindings);
