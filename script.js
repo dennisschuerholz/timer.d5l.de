@@ -2,6 +2,7 @@ let countdown;
 let timerValue = 0;
 let isTimerRunning = false;
 const timeDisplay = document.getElementById("timeDisplay");
+let cursorTimeout;
 
 function parseKeydown(e) {
     if (document.querySelector("dialog[open]") != null) return;
@@ -200,6 +201,29 @@ function decrementTimer() {
     //decrementTimeButton.blur();
 }
 //decrementTimeButton.addEventListener("click", decrementTimer);
+
+function hideCursor() {
+    clearTimeout(cursorTimeout);
+    document.body.style.cursor = 'auto';
+    cursorTimeout = setTimeout(() => {
+        document.body.style.cursor = 'none';
+    }, 1000);
+}
+
+document.addEventListener('fullscreenchange', () => {
+    if (
+        document.fullscreenElement /* Standard syntax */ ||
+        document.webkitFullscreenElement /* Safari and Opera syntax */ ||
+        document.msFullscreenElement /* IE11 syntax */
+    ) {
+        document.body.addEventListener('mousemove', hideCursor);
+        hideCursor();
+    } else {
+        document.body.removeEventListener('mousemove', hideCursor);
+        clearTimeout(cursorTimeout);
+        document.body.style.cursor = 'auto';
+    }
+});
 
 displayTimeLeft(timeRemaining);
 if (shouldTimerRun) {
