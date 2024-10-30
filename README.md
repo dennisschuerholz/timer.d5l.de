@@ -40,6 +40,7 @@ Da dieser Timer rein im Browser ausgeführt wird und keinerlei Infrastruktur ben
 - [ ] Konfigurierbares Basisdesign (über verschiedene Farbschemata)
 - [ ] Bedienelemente zur Steuerung per Maus
 - [ ] Optionale Töne während bzw. beim Ablauf des Timers
+- [ ] digitale Zeitangabe mit/ohne Angabe der Sekunden (für lang laufende Timer)
 - [ ] Unterschiedliche Timerdesigns (ggf. mit/ohne digitale Zeitangabe)
   - Kreisausschnitt (vgl. TimeTimer)
   - Ringausschnitt
